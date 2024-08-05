@@ -1,0 +1,267 @@
+/* ----------- Fonts ----------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* ----------- Fonts ----------- */
+
+/* ----------- Reset CSS ----------- */
+
+@import url(reset.css);
+
+/* ----------- Reset CSS ----------- */
+
+/* ----------- Variables ----------- */
+
+:root {
+  --white: #ffffff;
+
+  --stone-100: #f3e6d8;
+  --stone-150: #e4ded8;
+  --stone-600: #5f574e;
+  --stone-900: #302d2c;
+
+  --brown-800: #854632;
+
+  --rose-800: #7b284f;
+  --rose-50: #fff5fa;
+}
+
+/* ----------- Variables ----------- */
+
+/* ----------- Components ----------- */
+
+.title {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  color: var(--brown-800);
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  font-family: "Young Serif", serif;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 5vw, 1.8rem);
+}
+
+.list-item {
+  position: relative;
+  margin-left: clamp(0rem, 1vw, 1rem);
+  padding-left: clamp(2rem, 5vw, 3.2rem);
+}
+
+hr {
+  background: #e8e8e8;
+  width: 100%;
+  height: 0.1rem;
+}
+
+/* ----------- Components ----------- */
+
+/* ----------- General ----------- */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: var(--stone-100);
+  color: var(--stone-600);
+  font-size: 1.6rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 481px) {
+  .wrapper {
+    justify-content: initial;
+  }
+}
+
+/* ----------- General ----------- */
+
+/* ----------- Recipe ----------- */
+
+.recipe {
+  border-radius: 2.5rem;
+  background: var(--white);
+  padding: clamp(2rem, 5vw, 4rem);
+  max-width: 75rem;
+}
+
+/* .header__recipe {
+} */
+
+/* ----------- Recipe ----------- */
+
+/* ----------- Header ----------- */
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header__image {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  width: 100%;
+}
+
+.header__image > img {
+  display: block;
+  border-radius: 1.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.header__title {
+  margin-bottom: clamp(1rem, 5vw, 2rem);
+  color: var(--stone-900);
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: initial;
+  font-family: "Young Serif", serif;
+}
+
+.header__description {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.header__time {
+  border-radius: 1rem;
+  background: var(--rose-50);
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+/* .time {
+} */
+
+.time__title {
+  margin-bottom: clamp(1rem, 5vw, 2rem);
+  color: var(--rose-800);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 5vw, 2.1rem);
+}
+
+/* .time__list {
+} */
+
+.time__item {
+  position: relative;
+  margin-left: clamp(0rem, 1vw, 1rem);
+  padding-left: clamp(2rem, 5vw, 3.2rem);
+}
+
+.time__item::before {
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  border-radius: 50%;
+  background: var(--rose-800);
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+}
+
+/* ----------- Header ----------- */
+
+/* ----------- Ingredients ----------- */
+
+.ingredients {
+  margin-bottom: 3rem;
+}
+
+/* .ingredients__title {
+} */
+
+/* .ingredients__list {
+} */
+
+.ingredients__item {
+  position: relative;
+  margin-left: clamp(0rem, 1vw, 1rem);
+  padding-left: clamp(2rem, 5vw, 3.2rem);
+}
+
+.ingredients__item::before {
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  border-radius: 50%;
+  background: var(--brown-800);
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+}
+
+/* ----------- Ingredients ----------- */
+
+/* ----------- Instructions ----------- */
+
+.instructions {
+  counter-reset: ol-number;
+  margin: clamp(2rem, 5vw, 2.5rem) 0;
+}
+
+/* .instructions__title {
+} */
+
+.instructions__list {
+  list-style-type: none;
+}
+
+/* .instructions__item {
+} */
+
+.instructions__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  counter-increment: ol-number;
+  content: counter(ol-number) ".";
+  color: var(--brown-800);
+  font-weight: 700;
+}
+
+/* ----------- Instructions ----------- */
+
+/* ----------- Nutrition ----------- */
+
+.nutrition {
+  margin-top: clamp(2rem, 5vw, 2.5rem);
+}
+
+/* .nutrition__title {
+} */
+
+.nutrition__description {
+  margin-bottom: 3rem;
+}
+
+/* .nutrition__list {
+} */
+
+.nutrition__item {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 1.5rem;
+}
+
+.nutrition__name {
+  color: var(--stone-600);
+  font-weight: 600;
+}
+
+.nutrition__count {
+  color: var(--brown-800);
+  font-weight: 700;
+}
+
+/* ----------- Nutrition ----------- */
